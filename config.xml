@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="es.example.es.silme.lifereneix" version="5.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Guía medio ambiente Menorca</name>
+    <description>
+        Aplicación para descubrir los valores ambientales de Menorca.
+    </description>
+    <author email="cartografia@cime.es" href="http://cartografia.cime.es">
+        IDE menorca
+    </author>
+    <content src="index.html" />
+    
+    <access origin="*" />
+	<preference name="SplashScreen" value="screen" />
+	<preference name="SplashScreenDelay" value="5000" />   
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>	    
+</widget>

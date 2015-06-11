@@ -1,0 +1,315 @@
+html, body {
+    margin  : 0;
+    padding : 0;
+    height  : 100%;
+    width   : 100%;
+}
+@media only screen and (max-width: 600px) {
+    html, body {
+        height  : 117%;
+    }
+}
+
+/*
+http://view.jquerymobile.com/1.3.2/dist/demos/widgets/transitions/
+
+.ui-page { -webkit-backface-visibility: hidden; }
+*/
+#logoLink{left:185px;}
+
+#logo{background-image: url("img/logo.png");display:block;height: 36px;width: 72px;}
+#logoIde{background-image: url("img/logo-ide.png");display:block;height: 37px;width: 165px;}
+#mapa {
+    width    : 100%;
+    position : relative;
+    height   : 100%;
+	/* posem fons blanc perque es vegi be amb el topografic */
+    background-color: #ffffff;
+}
+
+
+.olControlAttribution {
+    position      : absolute;
+    font-size     : 10px;
+    bottom        : 0 !important;
+    right         : 0 !important;
+    background    : rgba(0,0,0,0.1);
+    font-family   : Arial;
+    padding       : 2px 4px;
+    border-radius : 5px 0 0 0;
+}
+#title, #tags, #shortdesc {
+    display: none;
+}
+
+#mainContainer .ui-content {
+	padding: 0;
+    margin: 0;
+	width    : 100%;
+    position : relative;
+    height   : 100%;
+}
+
+/*BOTONS CENTRALS*/
+.ui-icon-reneix-aprop {background-image: url("img/aprop-icon.png");}
+.ui-icon-reneix-cerca {background-image: url("img/cerca-icon.png");}
+.ui-icon-reneix-capes {background-image: url("img/capes-icon.png");}
+
+/*****ARBRE i POIS***/
+#capes legend {color: #86BE3C;font-weight: bold;}
+
+#capes .treeCartoItemImg{
+	vertical-align: middle;
+	margin-bottom: 1px;
+	margin-right: 4px;
+	position:relative;
+	left:-5px;
+	width:18px;
+	height:18px;
+	float:left;
+}
+/**LOGOS ARBRES I COMPARTITS ALGUNS POIS**/
+.treeCartoItemImg_generic{background-image: url(img/pois/capa-blank.png) !important;}
+.treeCartoItemImg_basereferencia{background-image: url(img/pois/capa-base.png) !important;}
+.treeCartoItemImg_natura, .ui-icon-poi-natura{background-image: url(img/pois/icon-natura.png) !important;}
+.treeCartoItemImg_itinflors, .ui-icon-poi-ruta-flor{background-image: url(img/pois/icon-itin-floristics.png) !important;}
+.treeCartoItemImg_geologia,.ui-icon-poi-geologia{ background-image: url(img/pois/icon-geoglogia.png) !important;}
+.treeCartoItemImg_unitatsgeo{background-image: url(img/pois/icon-mapa-unitats-geo-pais.png) !important;}
+.treeCartoItemImg_fars,.ui-icon-poi-fars{ background-image: url(img/pois/icon-fars-torres.png) !important;}
+.treeCartoItemImg_xarxalic{ background-image: url(img/pois/icon-natura-2000-lic.png) !important;}
+.treeCartoItemImg_xarxazepa{background-image: url(img/pois/icon-natura-2000-lic.png) !important;}
+.treeCartoItemImg_camicavalls{background-image: url(img/pois/icon-cami-cavalls.png) !important;}
+.treeCartoItemImg_rutes, .ui-icon-poi-rutes {background-image: url(img/pois/icon-rutes.png) !important;}
+.treeCartoItemImg_platges{background-image: url(img/pois/icon-platges.png) !important;}
+.treeCartoItemImg_patrimoni,.ui-icon-poi-pat-hist{background-image: url(img/pois/icon-pat-hist.png) !important; }
+.treeCartoItemImg_concentracio, .ui-icon-poi-arees-conc{background-image: url(img/pois/icon-arees-conc.png) !important;}
+
+/**LOGOS BUTTONS***/
+#infoListButtons .ui-icon, #infoFitxaRUTA .ui-icon, #infoFitxaPOI .ui-icon {
+background-color:transparent !important;
+border-radius:-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;
+box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+}
+
+.ui-icon-habitats {background-image: url("img/pois/icon-habitat.png") !important}
+.ui-icon-especies {background-image: url("img/pois/icon-especies.png") !important}
+.ui-icon-mapa {background-image: url("img/pois/icon-mapa.png") !important}
+.ui-icon-mapaYours {background-image: url("img/pois/icon-mapaYours.png") !important}
+
+#infoFitxaPOI .ui-content, #infoCand .ui-content {
+    margin: 5px;
+    padding: 5px;
+}
+#infoFitxaRUTA .ui-content, #infoCand .ui-content {
+    margin: 5px;
+    padding: 5px;
+}
+.center-div .ui-listview {
+	margin: 0;
+	border: 1px solid #CCCCCC;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.center-div .ui-listview li {
+	border: 0;
+}
+
+.center-div .ui-listview .ui-btn {
+	border-top: 1px solid #CCCCCC;
+}
+
+.center-div .ui-listview li a span {
+	font-size: 12px;
+    font-weight: normal;
+}
+
+.fitxa_desc {
+	overflow: visible;
+	text-overflow: inherit;
+	white-space: normal;
+	margin-top:5px;
+}
+
+.fitxa_mapa {
+	margin-left:-5px !important;
+}
+#geolocateButton {
+	position: absolute;
+    z-index: 999999;
+    border-radius: 4px 4px 4px 4px;
+    height: 36px;
+    left: 10px;
+    top: 105px;
+    width: 38px;
+    background-image: none;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0) !important;-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0) !important;-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0) !important;
+}
+
+#buscadorAdrMunicipi {
+	width:300px;
+}
+
+.olControlLayerSwitcher {
+	right: 1px;
+	top: 10px;
+}
+
+#infoFitxaPOIImg {
+	width: auto;
+	cursor:pointer;
+}
+#infoFitxaRUTAImg {
+	width: auto;
+	cursor:pointer;
+}
+
+
+
+/*************** ESTILS ZOOMBAR OPENLAYERS **************/
+/*
+div.olControlZoom {top: 20px !important;}
+
+div.olControlZoom a {
+    color: #929292 !important;
+    line-height: 32px !important;
+    text-shadow: 0 1px 0 #FFFFFF !important;
+    background: #eeeeee !important; 
+    background: rgba(238, 238, 238, 1) !important;
+    filter: alpha(opacity=100) !important;
+    border: 1px solid #c4c4c4; 
+}
+a.olControlZoomIn {
+    border-radius: 4px 4px 0 0;
+}
+a.olControlZoomOut {
+    border-radius: 0 0 4px 4px;
+}*/
+
+div.olControlZoom a {margin:0 !important;}
+
+.ui-icon-user-pos { background: #444444 url("img/location.png"); margin: 8px 1px 2px 10px !important;}
+
+.ui-dialog-contain {
+	margin-top: 10px !important;
+	padding-bottom:10px !important;
+	text-align: center;
+}
+.ui-dialog-contain .ui-header {margin-bottom: 10px !important;}
+
+/*PHOTOSWIPE*/
+.gallery { list-style: none; padding: 0; margin: 0; }
+.gallery li { float: left;}
+.gallery li a { display: block; margin: 5px; border: 1px solid #3c3c3c; }
+.gallery li img { display: block; }
+.gallery .ui-content { overflow: hidden; }
+
+/***
+RETINA DISPLAY
+***/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+ .ui-icon-reneix-aprop {background-image: url("img/aprop-icon-36.png");background-size: 18px 18px;}
+ .ui-icon-reneix-cerca {background-image: url("img/cerca-icon-36.png");background-size: 18px 18px;}
+ .ui-icon-reneix-capes {background-image: url("img/capes-icon-36.png");background-size: 18px 18px;} 
+.treeCartoItemImg_generic{background-image: url(img/pois/capa-blank-36.png) !important;background-size: 18px 18px;}
+.treeCartoItemImg_basereferencia{background-image: url(img/pois/capa-base-36.png) !important;background-size: 18px 18px;}
+.treeCartoItemImg_natura,.ui-icon-poi-natura{background-image: url(img/pois/icon-natura-36.png) !important;background-size: 18px 18px;}
+.treeCartoItemImg_itinflors,.ui-icon-poi-ruta-flor{background-image: url(img/pois/icon-itin-floristics-36.png) !important;background-size: 18px 18px;}
+.treeCartoItemImg_geologia,.ui-icon-poi-geologia{background-image: url(img/pois/icon-geoglogia-36.png) !important;background-size: 18px 18px;}
+.treeCartoItemImg_unitatsgeo{background-image: url(img/pois/icon-mapa-unitats-geo-pais-36.png) !important;background-size: 18px 18px;}
+.treeCartoItemImg_fars,.ui-icon-poi-fars{background-image: url(img/pois/icon-fars-torres-36.png) !important;background-size: 18px 18px;}
+.treeCartoItemImg_xarxalic{background-image: url(img/pois/icon-natura-2000-lic-36.png) !important; background-size: 18px 18px;}
+.treeCartoItemImg_xarxazepa{background-image: url(img/pois/icon-natura-2000-lic-36.png) !important;background-size: 18px 18px;}
+.treeCartoItemImg_camicavalls{background-image: url(img/pois/icon-cami-cavalls-36.png) !important;background-size: 18px 18px;}
+.treeCartoItemImg_rutes, .ui-icon-poi-rutes{background-image: url(img/pois/icon-rutes-36.png) !important;background-size: 18px 18px;}
+.treeCartoItemImg_platges{background-image: url(img/pois/icon-platges-36.png) !important;background-size: 18px 18px;}
+.treeCartoItemImg_patrimoni, .ui-icon-poi-pat-hist{background-image: url(img/pois/icon-pat-hist-36.png) !important;background-size: 18px 18px;}
+.treeCartoItemImg_concentracio,.ui-icon-poi-arees-conc{background-image: url(img/pois/icon-arees-conc-36.png) !important; background-size: 18px 18px;}
+.ui-icon-habitats {background-image: url("img/pois/icon-habitat.png");background-size: 18px 18px;}
+.ui-icon-especies {background-image: url("img/pois/icon-especies.png");background-size: 18px 18px;}
+.ui-icon-mapa{background-image: url("img/pois/icon-mapa-36.png") !important;background-size: 18px 18px;}
+.ui-icon-user-pos {background-image: url(img/location-36.png) !important;background-size: 18px 18px;}
+#logo{background-image: url("img/logo-36.png");background-size:72px 36px}
+#logoIde{background-image: url("img/logo-ide-36.png");background-size:165px 37px;}
+}
+ 
+div.olControlZoom {top: 20px !important;background:none repeat scroll 0 0 rgba(255, 255, 255, 0.0) !important}
+
+div.olControlZoom a {
+	border: 1px solid #B3B3B3 /*{b-bup-border}*/;
+	background: #EEEEEE /*{b-bup-background-color}*/;
+	font-weight: bold;
+	color: #000000 /*{b-bup-color}*/;
+	text-shadow: 0 /*{b-bup-shadow-x}*/ 1px /*{b-bup-shadow-y}*/ 0 /*{b-bup-shadow-radius}*/ #EEEEEE /*{b-bup-shadow-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #FEFEFE /*{b-bup-background-start}*/), to( #DDDDDD /*{b-bup-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #FEFEFE /*{b-bup-background-start}*/, #DDDDDD /*{b-bup-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #FEFEFE /*{b-bup-background-start}*/, #DDDDDD /*{b-bup-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #FEFEFE /*{b-bup-background-start}*/, #DDDDDD /*{b-bup-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #FEFEFE /*{b-bup-background-start}*/, #DDDDDD /*{b-bup-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #FEFEFE /*{b-bup-background-start}*/, #DDDDDD /*{b-bup-background-end}*/);
+	width: 38px;
+	height: 36px;
+}
+
+div.olControlZoom a:hover {
+	border: 1px solid #BBBBBB /*{b-bhover-border}*/;
+	background: #DFDFDF /*{b-bhover-background-color}*/;
+	font-weight: bold;
+	color: #2f3e46 /*{b-bhover-color}*/;
+	text-shadow: 0 /*{b-bhover-shadow-x}*/ 1px /*{b-bhover-shadow-y}*/ 0 /*{b-bhover-shadow-radius}*/ #FFFFFF /*{b-bhover-shadow-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #EAEAEA /*{b-bhover-background-start}*/), to( #D3D3D3 /*{b-bhover-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #EAEAEA /*{b-bhover-background-start}*/, #D3D3D3 /*{b-bhover-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #EAEAEA /*{b-bhover-background-start}*/, #D3D3D3 /*{b-bhover-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #EAEAEA /*{b-bhover-background-start}*/, #D3D3D3 /*{b-bhover-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #EAEAEA /*{b-bhover-background-start}*/, #D3D3D3 /*{b-bhover-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #EAEAEA /*{b-bhover-background-start}*/, #D3D3D3 /*{b-bhover-background-end}*/);
+}
+
+
+/* sobreescrivimos estilos botones zoom in y out */ 
+div.olControlZoom .olControlZoomIn {
+	background-image: url( "img/zoom-in.png" );
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+div.olControlZoom .olControlZoomOut {
+	background-image: url( "img/zoom-out.png" );
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+div.olControlZoom .olControlZoomIn:hover {
+	background-image: url( "img/zoom-in.png" );
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+div.olControlZoom .olControlZoomOut:hover {
+	background-image: url( "img/zoom-out.png" );
+	background-position: center center;
+	background-repeat: no-repeat;
+} 
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	div.olControlZoom .olControlZoomIn {
+		background-image: url( "img/zoom-in-36.png" );
+		background-size: 18px 18px;
+	}
+	
+	div.olControlZoom .olControlZoomOut	{
+		background-image: url( "img/zoom-out-36.png" );
+		background-size: 18px 18px;
+	}
+	
+	div.olControlZoom .olControlZoomIn:hover {
+		background-image: url( "img/zoom-in-36.png" );
+		background-size: 18px 18px;
+	}
+	
+	div.olControlZoom .olControlZoomOut:hover {
+		background-image: url( "img/zoom-out-36.png" );
+		background-size: 18px 18px;
+	}
+
+}

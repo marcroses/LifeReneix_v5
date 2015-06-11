@@ -1,0 +1,31 @@
+.navbar-default
+{
+    background: none;
+    border: none;
+    margin-bottom: 0px;
+}
+
+.navbar-nav li .ui-btn
+{
+    padding: 0px;
+}
+
+.navbar-default .navbar-toggle
+{
+	border: none;
+	float: left;
+    margin: 8px 15px
+}
+
+legend
+{
+	font-size: 16px;
+	border: none;
+	margin: 0px;
+}
+
+a.ui-btn-hover-a.ui-btn, a.ui-btn-up-a.ui-btn, .navbar-default .navbar-nav > li > a.ui-btn-up-a
+{
+	text-decoration: none;
+	color: #ffffff !important;
+}
